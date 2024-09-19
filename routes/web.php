@@ -11,12 +11,12 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about', ['nama' => 'Yudha Dewantara'], ['title' => 'About']);
+    return view('about', ['nama' => 'Yudha Dewantara'], ['title' => 'About Us']);
 });
 
 Route::get('/posts', function () {
     return view('posts', [
-        'title' => 'Blog',
+        'title' => 'Article',
         'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->paginate(9)->withQueryString()
     ]);
 });
