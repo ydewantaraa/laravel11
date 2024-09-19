@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
 
-    <div class="py-4 px-4 mx-auto max-w-screen-xl lg:px-6">
+    <div class="my-4 py-4 px-4 mx-auto max-w-screen-xl lg:px-6">
         <div class="mx-auto max-w-screen-md sm:text-center">
             <form action="/posts">
                 @if (request('category'))
@@ -90,5 +90,7 @@
             @endforelse
         </div>
     </div>
+
+    {{ $posts->links() }}
 
 </x-layout>
